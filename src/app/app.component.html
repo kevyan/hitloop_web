@@ -1,24 +1,19 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<!-- <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul> -->
-<nav>
-  <a routerLink="/landing-page">HOME</a>
-</nav>
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class='sidenav'>
+      <button color='primary' mat-button routerLink='/landing-page'>HOME</button>
+      <button color='primary' mat-button routerLink='/cal-calculator'>Calories Calculator</button>
+      <button color='primary' mat-button routerLink='/hitloop'>HitLoop</button>
+    </mat-drawer>
+    <div class='sidenav-content'>
+      <mat-toolbar color='primary'>
+        <mat-toolbar-row>
+            <button mat-icon-button (click)='drawer.toggle()'>
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span class='toolbartext'>HitLoop</span>
+        </mat-toolbar-row>
+      </mat-toolbar>
+    </div>
+</mat-drawer-container>
 
 <router-outlet></router-outlet>

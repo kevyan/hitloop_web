@@ -7,7 +7,8 @@ import { HitloopComponent } from './hitloop/hitloop.component';
 const routes: Routes = [
   {path: 'landing-page', component: LandingPageComponent},
   {path: 'cal-calculator', component: CalCalculatorComponent},
-  {path: 'hitloop', component: HitloopComponent}
+  {path: 'hitloop', component: HitloopComponent},
+  {path: '', redirectTo: '', pathMatch: 'full'}
 ];
 
 @NgModule({
