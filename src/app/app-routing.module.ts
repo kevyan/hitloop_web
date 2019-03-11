@@ -10,10 +10,6 @@ const routes: Routes = [
   {path: 'hitloop', component: HitloopComponent},
   {
     path: '', redirectTo: '/landing-page', pathMatch: 'full'
-  },
-  {
-    path: 'calculator',
-    loadChildren: './calculator/calculator.module#CalculatorModule'
   }
 ];
 
