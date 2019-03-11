@@ -1,8 +1,8 @@
-<mat-drawer-container class="container" autosize>
-    <mat-drawer #drawer class='sidenav'>
-      <button color='primary' mat-button routerLink='/landing-page'>HOME</button>
-      <button color='primary' mat-button routerLink='/cal-calculator'>Calories Calculator</button>
-      <button color='primary' mat-button routerLink='/hitloop'>HitLoop</button>
+<mat-drawer-container class='container'>
+    <mat-drawer #drawer class='sidenav' mode='side'>
+      <button color='primary' mat-button routerLink='/landing-page' (click)='drawer.toggle()'>HOME</button>
+      <button color='primary' mat-button routerLink='/cal-calculator' (click)='drawer.toggle()'>Calories Calculator</button>
+      <button color='primary' mat-button routerLink='/hitloop' (click)='drawer.toggle()'>HitLoop</button>
     </mat-drawer>
     <div class='sidenav-content'>
       <mat-toolbar color='primary'>
@@ -13,7 +13,6 @@
             <span class='toolbartext'>HitLoop</span>
         </mat-toolbar-row>
       </mat-toolbar>
+      <router-outlet></router-outlet>
     </div>
 </mat-drawer-container>
-
-<router-outlet></router-outlet>

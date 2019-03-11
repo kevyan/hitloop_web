@@ -2,8 +2,8 @@
 /* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
 @import "~@angular/material/theming";
 
-body {
-  font-family: Roboto, Arial, sans-serif;
+body{
+  display: flex;
 }
 
 @include mat-core();
@@ -17,3 +17,34 @@ $my-theme-warn:    mat-palette($mat-red);
 $my-theme: mat-light-theme($my-theme-primary, $my-theme-accent, $my-theme-warn);
 
 @include angular-material-theme($my-theme);
+
+
+.container{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.container .mat-drawer{
+  min-width: 200px;
+}
+
+.container .mat-drawer .mat-button{
+  display: block;
+  width: 100%;
+  height: 33.3%;
+  text-align: center;
+  text-emphasis-color: 'primary';
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.toolbartext {
+  text-align: center;
+  margin-left: 40%;
+  font-family: fantasy;
+}
