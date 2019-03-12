@@ -1,3 +1,19 @@
-<p>
-  The Ultimate HiiT Training Companion
-</p>
+<mat-grid-list cols="2" rowHeight="2:1">
+
+  <mat-grid-tile [colspan]=2 class='grid1container'>
+    <h1 class='grid1text'>Your Ultimate HiiT Traning Companion</h1>
+  </mat-grid-tile>
+
+  <mat-grid-tile class='grid2container'>
+    <span routerLink='/cal-calculator'>
+      <img src='../../assets/org_calc.png'>
+    </span>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <button mat-button routerLink='/hitloop' backgroundcolor='primary' style='margin: full'>
+      HitLooP
+    </button>
+  </mat-grid-tile>
+
+</mat-grid-list>
