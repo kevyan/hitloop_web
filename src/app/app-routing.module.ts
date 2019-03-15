@@ -8,9 +8,7 @@ const routes: Routes = [
   {path: 'landing-page', component: LandingPageComponent},
   {path: 'cal-calculator', component: CalCalculatorComponent},
   {path: 'hitloop', component: HitloopComponent},
-  {
-    path: '', redirectTo: '/landing-page', pathMatch: 'full'
-  }
+  {path: '', redirectTo: '/landing-page', pathMatch: 'full'}
 ];
 
 @NgModule({

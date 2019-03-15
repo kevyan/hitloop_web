@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule,
+import {MatButtonModule, MatCheckboxModule, MatFormFieldModule,
         MatInputModule, MatDividerModule, MatDatepickerModule,
-        MatSidenavModule, MatIconModule, MatToolbarModule, MatGridListModule} from '@angular/material';
+        MatSidenavModule,
+        MatIconModule, MatToolbarModule, MatGridListModule} from '@angular/material';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -29,8 +30,10 @@ import { HitloopComponent } from './hitloop/hitloop.component';
     MatDividerModule,
     MatSidenavModule,
     MatIconModule,
+    MatInputModule,
     MatToolbarModule,
-    MatGridListModule
+    MatGridListModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
