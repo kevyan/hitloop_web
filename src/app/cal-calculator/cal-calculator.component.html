@@ -1,21 +1,33 @@
-<mat-grid-list cols="3" rows="2">
-  <mat-grid-tile [colspan]=1 [rowspan]=1 class='userinput'>
-    <div>
-      <mat-form-field>
-        <input matInput placeholder="please enter your weight">
-      </mat-form-field>
-    </div>
-  </mat-grid-tile>
+<div>
+  <mat-grid-list cols="3" rows="2">
+    <mat-grid-tile [colspan]=1 [rowspan]=1 class='userinput'>
+      <h1 class='header'>
+        Personal attributes
+      </h1>
+      <div class='input'>
+        <mat-form-field>
+          <input matInput placeholder="please enter your weight">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="please enter your Age">
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
 
-  <mat-grid-tile [colspan]=1 [rowspan]=1>
-    section 2
-  </mat-grid-tile>
+    <mat-grid-tile [colspan]=1 [rowspan]=1>
+      section 2
+    </mat-grid-tile>
 
-  <mat-grid-tile [colspan]=1 [rowspan]=1>
-      section 3
-  </mat-grid-tile>
+    <mat-grid-tile [colspan]=1 [rowspan]=1>
+        section 3
+        <button mat-button (click)='renderchart()'>render!</button>
+    </mat-grid-tile>
 
-  <mat-grid-tile [colspan]=3 [rowspan]=1 style="background-color: beige">
-    chart
-  </mat-grid-tile>
-</mat-grid-list>
+    <mat-grid-tile [colspan]=3 [rowspan]=1>
+      <div class='container'>
+          <canvas id="hitchart" aria-label="Hello ARIA World" width="1000" height="300" style="border:1px solid #000000; margin-top: 2%">
+          </canvas>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
