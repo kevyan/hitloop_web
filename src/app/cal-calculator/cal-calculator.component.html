@@ -1,31 +1,46 @@
 <div>
-  <mat-grid-list cols="3" rows="2">
-    <mat-grid-tile [colspan]=1 [rowspan]=1 class='userinput'>
+  <mat-grid-list cols="7" rows="3">
+    <mat-grid-tile [colspan]=3 [rowspan]=1 class='userinput'>
       <h1 class='header'>
         Personal attributes
       </h1>
       <div class='input'>
-        <mat-form-field>
-          <input matInput placeholder="please enter your weight">
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="please enter your weight" [(ngModel)] = "weight">
         </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="please enter your Age">
+        <mat-form-field appearance="outline">
+            <input matInput placeholder="please enter your Age" [(ngModel)]='age'>
         </mat-form-field>
       </div>
     </mat-grid-tile>
 
-    <mat-grid-tile [colspan]=1 [rowspan]=1>
-      section 2
+    <mat-grid-tile [colspan]=1 [rowspan]=1 class='sec2'>
+      <button mat-button (click)='renderchart()'>Show Analysis</button>
     </mat-grid-tile>
 
-    <mat-grid-tile [colspan]=1 [rowspan]=1>
-        section 3
-        <button mat-button (click)='renderchart()'>render!</button>
+    <mat-grid-tile [colspan]=3 [rowspan]=1 class='userinput'>
+      <h1 class='header2'>
+        HiiT Detail Info
+      </h1>
+      <div class='input'>
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="please enter # of loops">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="Time of light workout">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="Time of medium workout #Optional">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="Time of intense workout">
+        </mat-form-field>
+      </div>
     </mat-grid-tile>
 
-    <mat-grid-tile [colspan]=3 [rowspan]=1>
+    <mat-grid-tile [colspan]=7 [rowspan]=2>
       <div class='container'>
-          <canvas id="hitchart" aria-label="Hello ARIA World" width="1000" height="300" style="border:1px solid #000000; margin-top: 2%">
+          <canvas id="hitchart" aria-label="Hello ARIA World" width="1000" height="300">
           </canvas>
       </div>
     </mat-grid-tile>

@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import * as chart from 'chart.js';
+import { NumberValueAccessor } from '@angular/forms/src/directives';
 
 @Component({
   selector: 'app-cal-calculator',
@@ -7,21 +8,28 @@ import * as chart from 'chart.js';
   styleUrls: ['./cal-calculator.component.scss']
 })
 export class CalCalculatorComponent implements OnInit, AfterViewInit {
-
+  age = 0;
+  weight = 0;
   constructor() { }
 
   canvas: any;
   ctx: any;
   myChart;
 
-  ngOnInit() {
+  hiitdata: Array<number>;
 
+  ngOnInit() {
   }
 
   ngAfterViewInit() {
   }
 
+  gethiitdata() {
+  }
+
   renderchart() {
+        console.log('age is ', this.age);
+        console.log('weight is ', this.weight);
         this.canvas = document.getElementById('hitchart');
         this.ctx = this.canvas.getContext('2d');
         console.log('context: ', this.ctx);
@@ -31,7 +39,7 @@ export class CalCalculatorComponent implements OnInit, AfterViewInit {
               labels: ['basal metabolic burn', 'InHiiT Burn', 'After Burn'],
               datasets: [
                 {
-                  data: [2000, 400, 199.9],
+                  data: [this.age, this.weight, 199.9],
                   borderWidth: 1,
                 },
                 {
