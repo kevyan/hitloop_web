@@ -18,7 +18,33 @@ export class CalCalculatorComponent implements OnInit, AfterViewInit {
 
   hiitdata: Array<number>;
 
+  metTable = [
+    {type: 'running', pace: 5, met: 8.0},
+    {type: 'running', pace: 5.2, met: 9.0},
+    {type: 'running', pace: 6, met: 10.0},
+    {type: 'running', pace: 6.7, met: 11.0},
+    {type: 'running', pace: 7, met: 11.5},
+    {type: 'running', pace: 7.5, met: 12.5},
+    {type: 'running', pace: 8, met: 13.5},
+    {type: 'running', pace: 8.6, met: 14.0},
+    {type: 'running', pace: 9, met: 15.0},
+    {type: 'running', pace: 10, met: 16.0},
+    {type: 'running', pace: 10.9, met: 18.0},
+    {type: 'running stairs', pace: 0, met: 15.0}
+  ];
+
+  runningPace = [];
+
+
   ngOnInit() {
+  }
+
+  getRunningPace() {
+    this.metTable.forEach(element => {
+      if (element.type === 'running') {
+        this.runningPace.push(element.met);
+      }
+    });
   }
 
   ngAfterViewInit() {
