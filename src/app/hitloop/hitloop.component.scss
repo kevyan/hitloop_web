@@ -4,9 +4,58 @@
 }
 
 .btn:hover {
-  background-color: rgba(127, 255, 212, 0.2);
+  background-color: #ffd699;
 }
 
-.btn.active {
-  background-color: lightsalmon;
+.btn {
+  background-color:#ffebcc;
+  text-align: center;
+  margin-top: 1%;
+  // margin-left: 5%;
+  // width: 1000px;
+  // height: 120px;
+}
+
+.text {
+  color: darkgrey;
+}
+
+.tile1 {
+  background-image: url(../../assets/fire.jpg);
+}
+
+.userinput{
+  background-color: lightgray;
+}
+
+.sec2{
+  background-color: darkorange;
+}
+
+.input{
+  margin-left: -40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header{
+  margin-top: -50%;
+}
+
+.header2{
+  display: flex;
+  padding: -10%, 10%;
+}
+
+.accordion {
+  width: 100%;
+}
+
+.expandinput {
+  margin-left: 5%;
+}
+
+.panelTitle {
+  font-family: 'Verdana';
+  color: darkgray;
 }

@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, MatFormFieldModule,
         MatInputModule, MatDividerModule, MatDatepickerModule,
-        MatSidenavModule,
+        MatSidenavModule, MatExpansionModule, MatSelectModule,
         MatIconModule, MatToolbarModule, MatGridListModule} from '@angular/material';
 
 
@@ -35,7 +35,10 @@ import { HitloopComponent } from './hitloop/hitloop.component';
     MatToolbarModule,
     MatGridListModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    MatExpansionModule,
+    MatSelectModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

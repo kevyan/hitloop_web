@@ -1,3 +1,90 @@
-<p>
-  hitloop
-</p>
+<div>
+    <mat-grid-list cols="7" rows="4">
+    <!-- <div style="text-align: center">
+        <button mat-button (click)="renderchart();" class="btn">Show Chart</button>
+    </div> -->
+     <mat-grid-tile [colspan]=7 [rowspan]=2 class="tile1">
+        <mat-accordion class="accordion" style="margin-top: 0%" multi=true>
+            <mat-expansion-panel style="background-color: #fff5e6">
+              <mat-expansion-panel-header>
+                <mat-panel-title class="panelTitle">
+                  <p class="text">Personal Information</p>
+                </mat-panel-title>
+                <mat-panel-description style="margin-top: 1%;">
+                  Please enter basic information about you
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+
+              <mat-form-field>
+                <input matInput placeholder="Height in cm" [(ngModel)]="height">
+              </mat-form-field>
+              <!-- <br /> -->
+              <mat-form-field class="expandinput">
+                <input matInput placeholder="Weight in kg" [(ngModel)]="weight">
+              </mat-form-field>
+              <!-- <br /> -->
+              <mat-form-field class="expandinput">
+                <input matInput placeholder="Age" [(ngModel)]="age">
+              </mat-form-field>
+
+              <mat-form-field class="expandinput">
+                <mat-select placeholder='Select your lifestyle' [(ngModel)]="selectedLS" required>
+                  <mat-option>--</mat-option>
+                  <mat-option *ngFor="let lifestyle of lifestyles" [value]="lifestyle">
+                    {{lifestyle.desc}}
+                  </mat-option>
+                  </mat-select>
+              </mat-form-field>
+            </mat-expansion-panel>
+
+
+            <mat-expansion-panel style="background-color: #fff5e6">
+              <mat-expansion-panel-header>
+                <mat-panel-title class="panelTitle">
+                  HiiT Information
+                </mat-panel-title>
+                <mat-panel-description>
+                  Enter information about your HiiT training
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+
+              <mat-form-field>
+                <mat-select placeholder='Select your workout' [(ngModel)]="selectedWO" required>
+                  <mat-option>--</mat-option>
+                  <mat-option *ngFor="let workout of workoutType" [value]="workout">
+                    {{workout}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field class="expandinput">
+                <input matInput placeholder="Number of loops" [(ngModel)]="LoopNum">
+              </mat-form-field>
+
+              <mat-form-field class="expandinput">
+                <input matInput placeholder="Intense Time" [(ngModel)]="IntenseTime">
+                <span matSuffix>minutes</span>
+              </mat-form-field>
+
+              <mat-form-field class="expandinput">
+                <input matInput placeholder="Moderate Time" [(ngModel)]="ModerateTime">
+                <span matSuffix>minutes</span>
+              </mat-form-field>
+
+              <mat-form-field class="expandinput">
+                <input matInput placeholder="Light Time" [(ngModel)]="LightTime">
+                <span matSuffix>minutes</span>
+              </mat-form-field>
+              <button mat-button (click)="renderchart();" class="btn">Show Chart</button>
+            </mat-expansion-panel>
+          </mat-accordion>
+     </mat-grid-tile>
+
+      <mat-grid-tile [colspan]=7 [rowspan]=3>
+        <div class='container'>
+          <canvas id="hitchart" aria-label="Hello ARIA World" width="1000" height="300">
+          </canvas>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>

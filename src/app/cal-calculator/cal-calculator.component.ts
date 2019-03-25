@@ -34,9 +34,17 @@ export class CalCalculatorComponent implements OnInit, AfterViewInit {
   ];
 
   runningPace = [];
+  workoutType = [
+    'running',
+    'walking',
+    'swimming'
+  ];
 
 
   ngOnInit() {
+    this.getRunningPace();
+    console.log('pace ', this.runningPace);
+
   }
 
   getRunningPace() {
