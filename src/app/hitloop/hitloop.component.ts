@@ -16,6 +16,7 @@ export class HitloopComponent implements OnInit, AfterViewInit {
   IntenseTime = undefined;
   ModerateTime = undefined;
   LightTime = undefined;
+  BMR = undefined;
   constructor() { }
 
   canvas: any;
@@ -26,6 +27,8 @@ export class HitloopComponent implements OnInit, AfterViewInit {
 
   selectedLS: string;
   selectedWO: string;
+  selectedPace: string;
+  gender: string;
 
   // lifestyleControl = new FormControl('', Validators.required);
 
@@ -37,19 +40,26 @@ export class HitloopComponent implements OnInit, AfterViewInit {
     {desc: 'not active at all', value: 1}
   ];
 
-  metTable = [
-    {type: 'running', pace: 5, met: 8.0},
-    {type: 'running', pace: 5.2, met: 9.0},
-    {type: 'running', pace: 6, met: 10.0},
-    {type: 'running', pace: 6.7, met: 11.0},
-    {type: 'running', pace: 7, met: 11.5},
-    {type: 'running', pace: 7.5, met: 12.5},
-    {type: 'running', pace: 8, met: 13.5},
-    {type: 'running', pace: 8.6, met: 14.0},
-    {type: 'running', pace: 9, met: 15.0},
-    {type: 'running', pace: 10, met: 16.0},
-    {type: 'running', pace: 10.9, met: 18.0},
-    {type: 'running stairs', pace: 0, met: 15.0}
+  genders = ['male', 'female'];
+
+  metTableRunning = [
+    {type: 'running', pace_running: 5, met: 8.0},
+    {type: 'running', pace_running: 5.2, met: 9.0},
+    {type: 'running', pace_running: 6, met: 10.0},
+    {type: 'running', pace_running: 6.7, met: 11.0},
+    {type: 'running', pace_running: 7, met: 11.5},
+    {type: 'running', pace_running: 7.5, met: 12.5},
+    {type: 'running', pace_running: 8, met: 13.5},
+    {type: 'running', pace_running: 8.6, met: 14.0},
+    {type: 'running', pace_running: 9, met: 15.0},
+    {type: 'running', pace_running: 10, met: 16.0},
+    {type: 'running', pace_running: 10.9, met: 18.0}
+  ];
+
+  metTableWalking = [
+    {type: 'walking', pace_walking: 'relax', met: 4.5},
+    {type: 'walking', pace_walking: 'medium', met: 6},
+    {type: 'walking', pace_walking: 'brisk', met: 7}
   ];
 
   runningPace = [];
@@ -63,11 +73,18 @@ export class HitloopComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     this.getRunningPace();
     console.log('pace ', this.runningPace);
+  }
 
+  getBMR() {
+    this.BMR = 66.5 - (6.755 * this.age) + (5.003 * this.height) + (13.75 * this.weight);
+    if (this.gender === 'female') {
+      this.BMR = this.BMR * 0.95;
+    }
+    console.log('bmr is ', this.BMR);
   }
 
   getRunningPace() {
-    this.metTable.forEach(element => {
+    this.metTableRunning.forEach(element => {
       if (element.type === 'running') {
         this.runningPace.push(element.met);
       }
@@ -92,7 +109,7 @@ export class HitloopComponent implements OnInit, AfterViewInit {
               labels: ['basal metabolic burn', 'InHiiT Burn', 'After Burn'],
               datasets: [
                 {
-                  data: [this.age, this.weight, 199.9],
+                  data: [this.BMR, this.weight, 199.9],
                   borderWidth: 1,
                 },
                 {
@@ -101,7 +118,7 @@ export class HitloopComponent implements OnInit, AfterViewInit {
                 },
                 {
                 label: 'Line Dataset',
-                data: [2000, 2400, 2600],
+                data: [this.BMR, 2400, 2600],
                 type: 'line'
                 }
             ]
