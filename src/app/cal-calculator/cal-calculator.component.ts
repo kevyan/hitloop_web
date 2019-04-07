@@ -1,6 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import * as chart from 'chart.js';
-import { NumberValueAccessor } from '@angular/forms/src/directives';
 
 @Component({
   selector: 'app-cal-calculator',
