@@ -14,13 +14,15 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { Route } from '@angular/compiler/src/core';
 import { CalCalculatorComponent } from './cal-calculator/cal-calculator.component';
 import { HitloopComponent } from './hitloop/hitloop.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     CalCalculatorComponent,
-    HitloopComponent
+    HitloopComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

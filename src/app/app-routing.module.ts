@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { CalCalculatorComponent } from './cal-calculator/cal-calculator.component';
 import { HitloopComponent } from './hitloop/hitloop.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path: 'landing-page', component: LandingPageComponent},
   {path: 'cal-calculator', component: CalCalculatorComponent},
   {path: 'hitloop', component: HitloopComponent},
+  {path: 'login', component:LoginComponent},
   {path: '', redirectTo: '/landing-page', pathMatch: 'full'}
 ];
 
