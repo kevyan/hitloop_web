@@ -23,6 +23,7 @@
     "@angular/platform-browser-dynamic": "~7.2.12",
     "@angular/router": "~7.2.12",
     "@types/chart.js": "^2.7.48",
+    "bcrypt": "^3.0.5",
     "body-parser": "^1.18.3",
     "chart.js": "^2.8.0",
     "chartjs": "^0.3.24",
@@ -31,13 +32,14 @@
     "express": "^4.16.4",
     "lodash": "^4.17.11",
     "mongoose": "^5.4.22",
+    "mongoose-unique-validator": "^2.0.2",
     "node-sass": "^4.11.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.13.0",
+    "@angular-devkit/build-angular": "^0.13.8",
     "@angular/cli": "~7.3.5",
     "@angular/compiler-cli": "~7.2.12",
     "@angular/language-service": "~7.2.12",

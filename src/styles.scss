@@ -48,3 +48,7 @@ $my-theme: mat-light-theme($my-theme-primary, $my-theme-accent, $my-theme-warn);
   margin-left: 40%;
   font-family: fantasy;
 }
+
+ul {
+  display: flex;
+}

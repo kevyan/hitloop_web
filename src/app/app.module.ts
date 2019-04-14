@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, MatFormFieldModule,
-        MatInputModule, MatDividerModule, MatDatepickerModule,
-        MatSidenavModule, MatExpansionModule, MatSelectModule,
+        MatInputModule, MatDividerModule, MatDatepickerModule, MatCardModule,
+        MatSidenavModule, MatExpansionModule, MatSelectModule, MatProgressSpinnerModule,
         MatIconModule, MatToolbarModule, MatGridListModule} from '@angular/material';
 
 
@@ -14,7 +14,10 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { Route } from '@angular/compiler/src/core';
 import { CalCalculatorComponent } from './cal-calculator/cal-calculator.component';
 import { HitloopComponent } from './hitloop/hitloop.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './auth/login/login.component';
+import { LogoutComponent } from './auth/logout/logout.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,9 @@ import { LoginComponent } from './login/login.component';
     LandingPageComponent,
     CalCalculatorComponent,
     HitloopComponent,
-    LoginComponent
+    LoginComponent,
+    LogoutComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +45,10 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     MatExpansionModule,
     MatSelectModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
