@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //   res.send('hello from nodemon');
 // });
 
-app.use((req, res, next) => {
+app.use("/api", (req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
     "Access-Control-Allow-Headers",
@@ -31,6 +31,7 @@ app.use((req, res, next) => {
     "Access-Control-Allow-Methods",
     "GET, POST, PATCH, PUT, DELETE, OPTIONS"
   );
+  res.send('success');
   next();
 });
 
