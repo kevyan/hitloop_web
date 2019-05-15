@@ -33,6 +33,7 @@ router.post("/login", (req, res, next) => {
   let fetchedUser;
   User.findOne({ email: req.body.email })
     .then(user => {
+      // console.log('user is ', user)
       if (!user) {
         return res.status(401).json({
           message: "Auth failed"
@@ -44,7 +45,7 @@ router.post("/login", (req, res, next) => {
     .then(result => {
       if (!result) {
         return res.status(401).json({
-          message: "Auth failed"
+          message: "User Not Found"
         });
       }
       const token = jwt.sign(
@@ -52,6 +53,7 @@ router.post("/login", (req, res, next) => {
         "hiitloophiitloophiitloop",
         { expiresIn: "1h" }
       );
+      // console.log('token ', token);
       res.status(200).json({
         token: token,
         expiresIn: 3600

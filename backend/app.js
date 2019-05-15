@@ -6,7 +6,7 @@ const userRoutes = require("./routes/user");
 
 const app = express();
 
-mongoose.connect("mongodb+srv://dev1:D7WSlwY1JGrBE1UX@cluster0-c42tk.mongodb.net/hitloop?retryWrites=true")
+mongoose.connect("mongodb+srv://dev1:D7WSlwY1JGrBE1UX@cluster0-c42tk.mongodb.net/hitloop?retryWrites=true", { useNewUrlParser: true })
 .then(()=>{
   console.log('connection success');
 })
@@ -31,7 +31,7 @@ app.use("/api", (req, res, next) => {
     "Access-Control-Allow-Methods",
     "GET, POST, PATCH, PUT, DELETE, OPTIONS"
   );
-  res.send('success');
+  // res.send('success');
   next();
 });
 
