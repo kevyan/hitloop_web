@@ -6,6 +6,7 @@ import {MatButtonModule, MatCheckboxModule, MatFormFieldModule,
         MatInputModule, MatDividerModule, MatDatepickerModule, MatCardModule,
         MatSidenavModule, MatExpansionModule, MatSelectModule, MatProgressSpinnerModule,
         MatIconModule, MatToolbarModule, MatGridListModule} from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -48,7 +49,8 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     MatCardModule,
     MatProgressSpinnerModule,
-    HttpClientModule
+    HttpClientModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

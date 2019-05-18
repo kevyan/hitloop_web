@@ -7,22 +7,19 @@
     <div class='sidenav-content'>
       <mat-toolbar color='primary'>
         <mat-toolbar-row>
-            <button mat-icon-button (click)='drawer.toggle()'>
+            <button mat-icon-button (click)='drawer.toggle()' fxFlex style="margin-right: 2%;">
                 <mat-icon>menu</mat-icon>
             </button>
-            <button mat-button routerLink='/login' style="left:90%;">
-              Login
-            </button>
-            <button mat-button routerLink='/signup' style="left:80%;">
-              Sign Up!
-            </button>
-            <button mat-button routerLink='/cal-calculator'>
+            <button mat-button routerLink='/hitloop'>
               Calories Calculator
             </button>
-            <button mat-button routerLink='/hitloop'>
-              HitLooP
+            <button mat-button routerLink='/login' fxFlex>
+              Login
             </button>
-            <button mat-button routerLink='/landing-page' class='toolbartext'>HitLooP</button>
+            <button mat-button routerLink='/signup' fxFlex>
+              Sign Up!
+            </button>
+            <button mat-button routerLink='/landing-page' class='toolbartext' fxFlex>HitLooP</button>
         </mat-toolbar-row>
       </mat-toolbar>
       <router-outlet></router-outlet>
